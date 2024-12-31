@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json()); // For parsing JSON request bodies
 
 // Connect to SQLite database
-const db = new sqlite3.Database('../../coding/inventorySystem', (err) => {
+const db = new sqlite3.Database('inventorySystemDB', (err) => {
   if (err) {
     console.error('Error connecting to database:', err.message);
   } else {
