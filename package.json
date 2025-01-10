@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
     "start": "next start",
     "lint": "next lint"
   },
@@ -28,6 +30,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.7",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
