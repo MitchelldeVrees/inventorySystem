@@ -27,7 +27,7 @@ export default function InventoryTablePage() {
 
   // Function to fetch inventory data
   const fetchData = () => {
-    fetch('http://31.187.131.209:5001/api/products')
+    fetch('/api/products')
       .then((response) => response.json())
       .then((data) => setInventory(data))
       .catch((error) => console.error('Error fetching inventory:', error));
@@ -79,7 +79,7 @@ export default function InventoryTablePage() {
 
   const handleDeleteItem = async () => {
     try {
-      const response = await fetch(`http://192.168.1.232:5001/api/products/${selectedItem.id}`, {
+      const response = await fetch(`/api/products/${selectedItem.id}`, {
         method: 'DELETE',
       });
   
@@ -120,7 +120,7 @@ export default function InventoryTablePage() {
   });
 
   const handleAddProduct = () => {
-    fetch('http://192.168.1.232:5001/api/products', {
+    fetch('/api/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ export default function InventoryTablePage() {
   
     
   const handleSaveChanges = () => {
-    fetch(`http://192.168.1.232:5001/api/products/${selectedItem.id}`, {
+    fetch(`/api/products/${selectedItem.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

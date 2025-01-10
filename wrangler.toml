@@ -1,0 +1,7 @@
+name = "my-project"
+compatibility_date = "2023-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "inventorysystemdb"
+database_id = "b3479269-fd07-411d-8897-9250e453e501"
