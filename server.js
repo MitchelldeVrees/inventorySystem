@@ -1,25 +1,4 @@
-const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const { google } = require('googleapis');
-const nodemailer = require('nodemailer');
 
-const app = express();
-const PORT = 5001;
-
-// Middleware
-app.use(cors());
-app.use(bodyParser.json()); // For parsing JSON request bodies
-
-// Connect to SQLite database
-const db = new sqlite3.Database('inventorySystemDB', (err) => {
-  if (err) {
-    console.error('Error connecting to database:', err.message);
-  } else {
-    console.log('Connected to the SQLite database.');
-  }
-});
 
 app.get('/api/products', (req, res) => {
   db.all(
@@ -519,14 +498,5 @@ async function sendEmail() {
     console.error('Error sending email:', error);
   }
 }
-
-
-
-
-// Start the server
-app.listen(PORT, '0.0.0.0', () => { // Listen on all network interfaces
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-
 
 
