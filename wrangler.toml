@@ -1,7 +1,12 @@
-name = "my-project"
-compatibility_date = "2023-10-01"
+name = "inventorysystem"
+account_id = "d225cef34058832dc6db839b99faf1ab"
+workers_dev = true
+compatibility_date = "2024-12-30"
+
+[build]
+command = "npm run build" # Ensure your Next.js app builds correctly
 
 [[d1_databases]]
-binding = "DB"
+binding = "DB" # Bind the D1 database
 database_name = "inventorysystemdb"
 database_id = "b3479269-fd07-411d-8897-9250e453e501"

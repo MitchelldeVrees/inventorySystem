@@ -31,7 +31,7 @@ export const onRequest = async (context) => {
     }
   
     // 404 if no match
-    return new Response(JSON.stringify({ error: 'Not found' }), { status: 404 });
+    return new Response(JSON.stringify({ error: 'Not found INSIDE API' }), { status: 404 });
   };
   
   /**
