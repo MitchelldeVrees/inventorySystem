@@ -44,7 +44,7 @@ export default function HouseholdPage() {
 
   // Fetch inventory items
   useEffect(() => {
-    fetch('http://192.168.1.232:5001/api/products')
+    fetch('/api/products')
       .then((response) => response.json())
       .then((data) => setItems(data))
       .catch((error) => console.error('Error fetching products:', error));

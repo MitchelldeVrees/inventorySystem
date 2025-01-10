@@ -32,25 +32,16 @@ export default function InventoryTablePage() {
       .then((data) => setInventory(data))
       .catch((error) => console.error('Error fetching inventory:', error));
 
-      fetch('http://31.187.131.209:5001/api/quantity')
+      fetch('/api/quantity')
       .then((response) => response.json())
       .then((data) => setQuantity(data))
       .catch((error) => console.error('Error fetching inventory:', error));
 
-      fetch('http://31.187.131.209:5001/api/category')
+      fetch('/api/category')
       .then((response) => response.json())
       .then((data) => setCategory(data))
       .catch((error) => console.error('Error fetching inventory:', error));
 
-  };
-
-  const fetchHouseholdData = () => {
-    return fetch('http://31.187.131.209:5001/api/household')
-      .then((response) => response.json())
-      .catch((error) => {
-        console.error('Error fetching household data:', error);
-        return [];
-      });
   };
   
 
