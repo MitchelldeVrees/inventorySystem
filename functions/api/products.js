@@ -1,7 +1,7 @@
 export const onRequest = async (context) => {
     const { request, env } = context;
     const url = new URL(request.url);
-  
+    console.log("I AM CALLED");
     // Example path: /api/products or /api/products/123
     const pathParts = url.pathname.split('/').filter(Boolean); 
     // pathParts might be ["api", "products"] or ["api", "products", "123"]
