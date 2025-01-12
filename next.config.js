@@ -1,5 +1,4 @@
-const { withCloudflarePagesAdapter } = require('@cloudflare/next-on-pages/adapter');
-
-module.exports = withCloudflarePagesAdapter({
+module.exports = {
+  reactStrictMode: true,
   output: 'standalone',
-});
+};
