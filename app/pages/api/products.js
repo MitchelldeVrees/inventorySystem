@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import { queryD1 } from '../../lib/db';
 
 export default async function handler(req, res) {
